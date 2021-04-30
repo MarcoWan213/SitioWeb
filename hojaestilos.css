@@ -224,8 +224,9 @@ footer{
 }
 
 .icon-text-text{
-    float: left;
-    width: 60%;
+    text-align: right;
+    float: right;
+    width: 70%;
     padding: 4% 4% 2% 0;
 }
 
