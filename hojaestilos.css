@@ -179,11 +179,11 @@ nav ul li{
     font-size: 100%;
     display: inline-block;
     float: left;
-    padding: 10%;
+    padding: 2% 10% 2% 10%;
 }
 
 nav ul li a{
-    color: #ffffff;
+    color: #f2f2f2;
     text-align: center;
 }
 
