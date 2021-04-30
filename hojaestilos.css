@@ -262,6 +262,7 @@ footer{
     border-top: 1px solid white;
     text-align: center;
     margin: 0;
+    overflow: hidden; /*Esconde el scrollBar */
 }
 
 .second-footer p, .second-footer a{
