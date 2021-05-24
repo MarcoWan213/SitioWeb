@@ -11,3 +11,4 @@ document.getElementById("don").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp" + menu[1].t
 document.getElementById("maza").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp" + menu[2].type;
 document.getElementById("bubu").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp" + menu[3].type;
 document.getElementById("mons").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp" + menu[4].type;
+

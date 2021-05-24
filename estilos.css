@@ -162,3 +162,7 @@ article img{
     align-items: center;
     max-width: 50%;
 }
+
+#title{
+    border-color: crimson;
+}
