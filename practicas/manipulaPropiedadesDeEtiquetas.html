@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="texto">H__a  _u__o</p><br>
+    <input type="button" onclick="cambiarTexto()"  value="Coloreemos" id="b1">
+    <input type="button" onclick="ajustarTamaño()" value="Ajustemos" id="b2">
+
+    <script>
+        //1.- Manipulen contenidos de etiquetas 
+        //2.- manipules propiedades de etiquetas 
+        //3.- manipulen estilos de etiqueta    
+        function cambiarTexto(){
+            document.getElementById('texto').style.backgroundColor = "goldenrod";
+            document.getElementById('texto').style.border = "2px solid black";            
+            document.getElementById('texto').style.display = "2px solid black";            
+        }
+        function ajustarTamaño(){           
+            document.getElementById('texto').style.display = "inline";
+                        
+        }
+    </script>
+</body>
+
+</html>
