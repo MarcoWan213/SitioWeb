@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea name="" id="leer_palabras" cols="30" rows="10">Vamos A ver si cuenta bien para empezar</textarea>
+    <form>
+        <label for="lBuscar">Buscar:</label><br>
+        <input type="text" id="tBuscar" name="fname"><br>
+        <label for="lRemplazar">Remplazar:</label><br>
+        <input type="text" id="tRemplazar" name="lname">
+    </form>
+    <input type="button" value="Remplazar" onclick=cambiar_palabras()>
+
+    <script>
+        function cambiar_palabras() {
+            //Obtenemos el texto del campo
+            var texto = document.getElementById("leer_palabras").value;
+            //limpiamos el texto
+            texto = limpiarTexto(texto);
+            //Troceamos el texto por los espacios
+            var textoTroceado = texto.split(" ");
+            ////Obtenemos el texto del campo de la palabra que buscaremos
+            var tBuscar = document.getElementById("tBuscar").value;
+            //limpiamos el texto buscar
+            tBuscar = limpiarTexto(tBuscar);
+            ////Obtenemos el texto del campo de la palabra que remplazaremos
+            var tRemplazar = document.getElementById("tRemplazar").value;
+            //limpiamos el texto remplazar
+            tRemplazar = limpiarTexto(tRemplazar);
+            //remplazamos todos los resultados
+            texto = texto.replaceAll(tBuscar, tRemplazar);
+            //imp
+            alert(texto);
+        }
+        function limpiarTexto(limpiar) {
+            //Reemplazamos los saltos de linea por espacios
+            limpiar = limpiar.replace(/\r?\n/g, " ");
+            //Reemplazamos los espacios seguidos por uno solo
+            limpiar = limpiar.replace(/[ ]+/g, " ");
+            //Quitarmos los espacios del principio y del final
+            limpiar = limpiar.replace(/^ /, "");
+            limpiar = limpiar.replace(/ $/, "");
+            return limpiar;
+        }
+    </script>
+</body>
+
+</html>
