@@ -373,3 +373,8 @@ footer{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.iconoArriba{
+    position: relative;
+    width: 10px;
+}
