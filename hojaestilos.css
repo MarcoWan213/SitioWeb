@@ -443,6 +443,10 @@ footer {
     width: 250px;
     display: inline;
 }
+.imgGal{
+    width: 100px;
+    display: inline;
+}
 
 .textServicios {
     padding-bottom: 50px;
