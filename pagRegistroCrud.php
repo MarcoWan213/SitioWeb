@@ -56,14 +56,7 @@
             </div>
             <input type="checkbox" id="check">
             <h2 id="title">Los Nobles</h2>
-            <article>
-                <div class="">
-                    <div class="container text-center">
-                        <h1>Los Nobles</h1>
-                    </div>
-                </div>
-
-
+            <article>                
                 <button id="show" class="btn btn-outline-primary" name="insert">Insertar</button>
 
 
@@ -124,7 +117,7 @@
                     </div>
                     <h3>Listado de productos</h3>
 
-                    <table class="table table-responsive table-hover table-bordered shadow p-2 mb-2 bg-danger rounded ">
+                    <table class="table table-responsive table-hover table-bordered shadow bg-danger rounded ">
                         <tr>
                             <th>Nombre</th>
                             <th>Apellidos</th>
@@ -164,7 +157,7 @@
                     </table>
 
                 </div>
-                <br><br>
+                
             </article>
             <footer>
                 <div class="banner.wrapper">
