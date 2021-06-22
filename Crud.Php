@@ -13,20 +13,20 @@ if (isset($_POST['guardar'])) {
   $contraseña = $MySQLiconn->real_escape_string($_POST['contraseña']);
 
 
-  $SQL = $MySQLiconn->query("INSERT INTO personal(idpersonal, nombre, apellidoP, apellidoM, email, contraseña)  
+  $SQL = $MySQLiconn->query("INSERT INTO personal(idPersonal, nombre, apellidoP, apellidoM, email, contraseña)  
     VALUES(NULL,'$nombre','$apellidoP','$apellidoM','$email','$contraseña')");
 
 
   if (!$SQL) {
     echo $MySQLiconn->error;
   }
-  header("Location:pgRegistroCrud.php");
+  header("Location:pagRegistroCrud.php");
 }
 
 /* Codigo para eliminar Datos */
 if (isset($_GET['eliminar'])) {
   $SQL = $MySQLiconn->query("DELETE FROM `personal` WHERE `personal`.`idPersonal` = " . $_GET['eliminar']);
-  header("Location:index.php");
+  header("Location:pagRegistroCrud.php");
 }
 
 
@@ -40,8 +40,8 @@ if (isset($_GET['editar'])) {
 if (isset($_POST['actualizar'])) {
 
     $SQL = $MySQLiconn->query(
-    "UPDATE personal SET nombre='"
-      . $_POST['nombre$nombre']
+      "UPDATE personal SET nombre='"
+      . $_POST['nombre']
       . "', apellidoP='"
       . $_POST['apellidoP']
       . "',apellidoM='"
@@ -49,7 +49,7 @@ if (isset($_POST['actualizar'])) {
       . "',email='"
       . $_POST['email']
       . "',contraseña='"
-      . $_POST['contraseña']      
+      . $_POST['contraseña']
       . "' WHERE idPersonal="
       . $_GET['editar']
   );
