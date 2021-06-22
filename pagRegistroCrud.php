@@ -1,3 +1,6 @@
+<?php
+include_once 'crudPersonal.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +59,7 @@
             </div>
             <input type="checkbox" id="check">
             <h2 id="title">Los Nobles</h2>
-            <article>                
+            <article>
                 <button id="show" class="btn btn-outline-primary" name="insert">Insertar</button>
 
 
@@ -65,37 +68,35 @@
                         <form method="post">
                             <div class="form-row">
                                 <div class="form-group col-md-3">
-                                    <label class="control-label" for="nombre">Nombre:</label>
-                                    <input type="text" class="form-control" id='nombre' name="nombre" placeholder="Nombre" required value="<?php if (isset($_GET['editar'])) echo $getROW['nombre']; ?>" />
+                                    <label class="control-label" for="nombre"></label>
+                                    <input type="text" class="form-control" id='nombre' name="nombre" placeholder="Nombre del usuario" required value="<?php if (isset($_GET['editar'])) echo $getROW['nombre']; ?>" />
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-3">
-                                    <label class="control-label" for="apellidoP">apellidoPipción:</label>
-                                    <input type="text" class="form-control" name="apellidoP" placeholder="Apellido Paterno" value="<?php if (isset($_GET['editar'])) echo $getROW['apellidoPipcion'];  ?>" />
+                                    <label class="control-label" for="apellidoP"></label>
+                                    <input type="text" class="form-control" name="apellidoP" placeholder="Apellido paterno" value="<?php if (isset($_GET['editar'])) echo $getROW['apellidoP'];  ?>" />
                                 </div>
                             </div>
 
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label class="control-label" for="apellidoM">Fecha de ingreso:</label>
-                                    <input type="text" class="form-control" name="apellidoM" placeholder="Apellido Materno" required value="<?php if (isset($_GET['editar'])) echo $getROW['apellidoM'];  ?>" />
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-3">
-                                    <label class="control-label" for="email">Correo electronico:</label>
-                                    <input type="text" class="form-control" name="email" placeholder="Correo Electronico" required value="<?php if (isset($_GET['editar'])) echo $getROW['email'];  ?>" />
-                                </div>
-                            </div>
                             <div class="form-row">
                                 <div class="form-group col-md-2">
-                                    <label class="control-label" for="contraseña">Contraseña:</label>
-                                    <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" value="<?php if (isset($_GET['editar'])) echo $getROW['contraseña'];  ?>" />
+                                    <label class="control-label" for="apellidoM"></label>
+                                    <input type="text" class="form-control" name="apellidoM" placeholder="Apellido materno" required value="<?php if (isset($_GET['editar'])) echo $getROW['apellidoM'];  ?>" />
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                    <label class="control-label" for="email"></label>
+                                    <input type="text" class="form-control" name="email" placeholder="E-mail" required value="<?php if (isset($_GET['editar'])) echo $getROW['email'];  ?>" />
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                    <label class="control-label" for="contraseña"></label>
+                                    <input type="text" class="form-control" name="contraseña" placeholder="Contraseña" value="<?php if (isset($_GET['editar'])) echo $getROW['contraseña'];  ?>" />
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <?php
                                 if (isset($_GET['editar'])) {
@@ -115,14 +116,18 @@
                             </div>
                         </form>
                     </div>
-                    <h3>Listado de productos</h3>
+                    <h3>Listado de usuarios</h3>
 
-                    <table class="table table-responsive table-hover table-bordered shadow bg-danger rounded ">
+                    <table class="table table-responsive table-hover table-bordered shadow p-2 mb-2 bg-danger rounded ">
                         <tr>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
                             <th>ID</th>
-                            <th>Correo Electronico</th>                            
+                            <th>Nombre(s)</th>
+                            <th>Apellido paterno</th>
+                            <th>Apellido materno</th>
+                            <th>Correo electrónico</th>
+                            <th>Contraseña</th>
                         </tr>
 
                         <?php
@@ -146,10 +151,6 @@
                                 <td> <?php echo $row[3]; ?> </td>
                                 <td> <?php echo $row[4]; ?> </td>
                                 <td> <?php echo $row[5]; ?> </td>
-                                <td> <?php echo $row[6]; ?> </td>
-                                <td> <?php echo $row[7]; ?> </td>
-                                <td> <?php echo $row[8]; ?> </td>
-
                             </tr>
                         <?php
                         }
@@ -157,7 +158,7 @@
                     </table>
 
                 </div>
-                
+
             </article>
             <footer>
                 <div class="banner.wrapper">
