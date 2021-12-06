@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'Db.php';
 $nombre = $conexion->real_escape_string($_POST["nombre"]);
 $apellidoP = $conexion->real_escape_string($_POST["apellidoP"]);
 $apellidoM = $conexion->real_escape_string($_POST["apellidoM"]);
